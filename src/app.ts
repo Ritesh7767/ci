@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.get("/", (req, res) => {
-    res.send("hello world")
+    res.send("hii there")
 })
 
 app.listen(3000, () => console.log("Server is listening at port 3000"))
