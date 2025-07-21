@@ -1,5 +1,8 @@
 import express from 'express'
+import { PrismaClient } from '@prisma/client'
 
+
+const prisma = new PrismaClient()
 const app = express()
 
 app.use(express.json())
@@ -16,6 +19,7 @@ app.get("/owner", (req, res) => {
 app.get("/username:id", (req, res) => {
     const name  = req.params.id
     console.log(name)
+
     res.send(name)
 })
 
