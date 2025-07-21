@@ -19,8 +19,11 @@ app.get("/owner", (req, res) => {
 app.get("/username:id", (req, res) => {
     const name  = req.params.id
     console.log(name)
-
     res.send(name)
+})
+
+app.get("/login", (req, res) => {
+    res.send("this is login route")
 })
 
 app.listen(3000, () => console.log("Server is listening at port 3000"))
